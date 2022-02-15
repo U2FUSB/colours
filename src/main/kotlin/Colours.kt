@@ -3,8 +3,8 @@ class Colours {
     private val colours = listOf("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Black", "Silver")
 
     fun getAll (): List<String>{
-        //TODO return the colours list
-        return listOf("this should return the colours list")
+        //return the colours list
+        return listOf(colours.forEach{println(it)}.toString())
     }
 
     fun numberOfColours (): Int{
