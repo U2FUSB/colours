@@ -1,6 +1,6 @@
 class Colours {
 
-    private val colours = listOf("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Black", "Silver")
+    private val colours:List<String> = listOf("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Black", "Silver")
 
     fun getAll (): List<String>{
         //return the colours list
@@ -28,9 +28,12 @@ class Colours {
         return colours.sorted()
     }
 
-    fun coloursInAllCapitals() : List<String>{
-        //TODO return the colours in ALL CAPS
-        return listOf("this should return colours in all capitals")
+    fun coloursInAllCapitals(): List<String> {
+        //return the colours in ALL CAPS
+        //Variation in lambda exp foreach: does not work with String Templates --> .forEach seems only to work when using it with prints or when using returns --> would only give back first element
+        //"lowCase: ${colours.forEach {print("${it.lowercase()}, ")} }" +
+        //        "\nupCase: ${colours.forEach{print("${it.uppercase()}, ")} }"
+        return colours.map { "${it.uppercase()}, ${it.lowercase()}" }
     }
 
     fun coloursStartingWithLetter(letter: Char) : List<String>{
