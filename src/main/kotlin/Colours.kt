@@ -47,8 +47,8 @@ class Colours {
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
-        //TODO return the colours that have less chars than the number passed as s parameter
-        return listOf("this should return colours less than ${size} chars")
+        //return the colours that have less chars than the number passed as s parameter
+        return colours.filter { it.count() < size }
     }
 
     fun isColourInTheList(colour : String) : Boolean{
