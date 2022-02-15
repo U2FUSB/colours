@@ -17,33 +17,36 @@ private val colours = Colours()
 fun main(){
 
     //Use String templates i.e. ${} to insert the method calls into the actual println string.
-    //TODO tidy up the printing layout so that it is neat and has a nicer UI - you can choose what you would like to do
+    // tidy up the printing layout so that it is neat and has a nicer UI - you can choose what you would like to do
     //     here, maybe add breaks, lines, tabs, dividers, etc, whatever you think for making it nicer / easier to read.
-    println("The list is: ${colours.getAll()}")
+    println("""
+        |The list is: ${colours.getAll()}
+        |--------------------------------------------------------------
+        |The List has ${colours.numberOfColours()} elements stored
+        |--------------------------------------------------------------
+        |${colours.firstColour()} is the first colour in the list
+        |--------------------------------------------------------------
+        |${colours.lastColour()} is the last colour in the list
+        |--------------------------------------------------------------
+        |Sorted list is: ${colours.coloursInAplhabeticOrder()}
+        |--------------------------------------------------------------
+        |CAPITALISED list is: ${colours.coloursInAllCapitals()}
+        |--------------------------------------------------------------
+        |Colours starting with specific letter ${colours.coloursStartingWithLetter('B')} [ B was chosen ]
+        |--------------------------------------------------------------
+        |Colours with a specific number of chars ${colours.coloursWithSpecificNumberOfChars(6)} [ 6 was chosen]
+        |--------------------------------------------------------------
+        |${colours.coloursWithLessCharsThan(6)} have less than less 6 chars
+        |--------------------------------------------------------------
+        |True or false, is blue in the list: ${colours.isColourInTheList("blue")}
+        |--------------------------------------------------------------
+        |The list of colours, each printed on a new line is:
+    """.trimMargin())
 
-    println("The List has ${colours.numberOfColours()} elements stored")
-
-    println("${colours.firstColour()} is the first colour in the list")
-
-    println("${colours.lastColour()} is the last colour in the list")
-
-    println("Sorted list is: ${colours.coloursInAplhabeticOrder()}")
-
-    println("CAPITALISED list is: ${colours.coloursInAllCapitals()}")
-
-    println("Colours starting with specific letter ${colours.coloursStartingWithLetter('B')} [ B was chosen ]")
-
-    println("Colours with a specific number of chars ${colours.coloursWithSpecificNumberOfChars(6)} [ 6 was chosen]")
-
-    println("${colours.coloursWithLessCharsThan(6)} have less than less 6 chars ")
-
-    println("True or false, is blue in the list: ${colours.isColourInTheList("blue")}")
-
-    println("The list of colours, each printed on a new line is:")
     colours.getAll().forEach{ println("Colour: $it")}
 
     //for the three additional functions you wrote in Colours.kt, print the returned value here.
-    println("The Colours: ${colours.colourContainsLetter('l')} all contain the letter 'l' ")
+    println("\nThe Colours: ${colours.colourContainsLetter('l')} all contain the letter 'l' ")
     println("The First half of the colours are: ${colours.firstHalf()}")
     println("The Second half of the colours are: ${colours.secondHalf()}")
 }
