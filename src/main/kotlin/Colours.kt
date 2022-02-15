@@ -61,5 +61,11 @@ class Colours {
     fun colourContainsLetter(letter: Char) : List<String>{
         return colours  .filter {letter in it }
     }
+    fun firstHalf() : List<String>{
+        return colours.filterIndexed { index, _ -> index <= colours.size/2 }
+    }
+    fun secondHalf() : List<String>{
+        return colours.filterIndexed { index, _ -> index > colours.size/2 }
+    }
 
 }

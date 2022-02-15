@@ -46,7 +46,8 @@ fun main(){
     //    ...
     //    Colour: Silver
 
-    //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
+    //for the three additional functions you wrote in Colours.kt, print the returned value here.
     println("The Colours: ${colours.colourContainsLetter('l')} all contain the letter 'l' ")
-
+    println("The First half of the colours are: ${colours.firstHalf()}")
+    println("The Second half of the colours are: ${colours.secondHalf()}")
 }
