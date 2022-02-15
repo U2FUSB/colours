@@ -42,8 +42,8 @@ class Colours {
     }
 
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
-        //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
-        return listOf("this should return colours that have ${size} chars")
+        //return the colours that have exactly the same number of chars as the number passed as a parameter
+        return colours.filter { it.count() == size }
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
