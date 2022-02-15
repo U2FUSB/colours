@@ -58,7 +58,8 @@ class Colours {
                         .contains(colour.uppercase())
     }
 
-    //TODO Write THREE additional functions of your choice that will perform some sort of
-    // analysis on the colours list.
+    fun colourContainsLetter(letter: Char) : List<String>{
+        return colours  .filter {letter in it }
+    }
 
 }

@@ -47,5 +47,6 @@ fun main(){
     //    Colour: Silver
 
     //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
+    println("The Colours: ${colours.colourContainsLetter('l')} all contain the letter 'l' ")
 
 }
