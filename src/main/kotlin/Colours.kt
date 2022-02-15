@@ -37,8 +37,8 @@ class Colours {
     }
 
     fun coloursStartingWithLetter(letter: Char) : List<String>{
-        //TODO return the colours starting with the letter passed as a parameter
-        return listOf("this should return colours that start with ${letter}")
+        //return the colours starting with the letter passed as a parameter
+        return colours.filter { it.first() == letter }
     }
 
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
