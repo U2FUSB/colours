@@ -25,7 +25,7 @@ fun main(){
 
     println("${colours.firstColour()} is the first colour in the list")
 
-    print("${colours.lastColour()} is the last colour in the list")
+    println("${colours.lastColour()} is the last colour in the list")
 
     println("Sorted list is: ${colours.coloursInAplhabeticOrder()}")
 

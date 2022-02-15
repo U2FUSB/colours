@@ -4,7 +4,7 @@ class Colours {
 
     fun getAll (): List<String>{
         //return the colours list
-        return listOf(colours.toString())
+        return colours
     }
 
     fun numberOfColours (): Int{
@@ -23,8 +23,9 @@ class Colours {
     }
 
     fun coloursInAplhabeticOrder() : List<String>{
-        //TODO return the colours in alphabetical order
-        return listOf("this should return colours in alphabetic order")
+        //return the colours in alphabetical order
+        //Variation in lambda exp: colours.sortedBy { it }
+        return colours.sorted()
     }
 
     fun coloursInAllCapitals() : List<String>{
