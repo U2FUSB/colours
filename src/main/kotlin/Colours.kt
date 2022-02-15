@@ -13,13 +13,13 @@ class Colours {
     }
 
     fun firstColour() : String{
-        //TODO return the first colour in the list
-        return "this should return the first colour in the list"
+        //return the first colour in the list
+        return colours.first()
     }
 
     fun lastColour() : String{
-        //TODO return the last colour list
-        return "this should return the last colour in the list"
+        //return the last colour list
+        return colours.last()
     }
 
     fun coloursInAplhabeticOrder() : List<String>{
